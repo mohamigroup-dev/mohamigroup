@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOH AMI Group SUARL | Excellence Informatique & Bureautique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-blue: #002d62;
+        --accent-orange: #ff8c00;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .bg-navy {
+        background-color: var(--primary-blue);
+      }
+      .text-navy {
+        color: var(--primary-blue);
+      }
+      .bg-orange-brand {
+        background-color: var(--accent-orange);
+      }
+      .border-orange-brand {
+        border-color: var(--accent-orange);
+      }
+      .hover-orange:hover {
+        background-color: #e67e00;
+      }
+      .client-card {
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+      .client-card:hover {
+        border-left: 3px solid var(--accent-orange);
+        background: #f9fafb;
+        transform: translateX(5px);
+      }
+      .brand-logo {
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+      .brand-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      .section-title {
+        position: relative;
+        padding-bottom: 1rem;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--accent-orange);
+      }
+      .section-title-center::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-900 bg-white">
+    <nav
+      class="fixed w-full z-50 bg-white shadow-md border-t-4 border-orange-brand"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div
+          class="text-xl md:text-2xl font-black text-navy tracking-tighter uppercase"
+        >
+          MOH AMI <span class="text-orange-500">Group SUARL</span>
+        </div>
+        <div
+          class="hidden lg:flex space-x-8 font-semibold text-xs uppercase tracking-wider text-navy"
+        >
+          <a href="#accueil" class="hover:text-orange-500 transition"
+            >Accueil</a
+          >
+          <a href="#propos" class="hover:text-orange-500 transition"
+            >À Propos</a
+          >
+          <a href="#expertises" class="hover:text-orange-500 transition"
+            >Solutions</a
+          >
+          <a href="#clients" class="hover:text-orange-500 transition"
+            >Références</a
+          >
+          <a href="#contact" class="hover:text-orange-500 transition"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="https://wa.me/221779032892"
+          class="bg-orange-brand text-white px-5 py-2 rounded-full font-bold hover-orange transition shadow-lg text-xs flex items-center"
+        >
+          <i class="fab fa-whatsapp mr-2 text-lg"></i> 77 903 28 92
+        </a>
+      </div>
+    </nav>
+
+    <section id="accueil" class="pt-32 pb-20 bg-gray-50 border-b">
+      <div
+        class="container mx-auto px-6 flex flex-col lg:flex-row items-center"
+      >
+        <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-10">
+          <span
+            class="inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded text-xs font-bold uppercase tracking-widest mb-4"
+            >L'Excellence au service de vos ambitions</span
+          >
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy leading-tight"
+          >
+            Propulsez votre infrastructure <br /><span
+              class="text-orange-500 italic"
+              >vers le futur.</span
+            >
+          </h1>
+          <p class="text-gray-600 mt-6 text-lg leading-relaxed">
+            MOH AMI Group équipe les institutions leaders au Sénégal avec le
+            meilleur de la technologie mondiale. Fiabilité, performance et
+            réactivité sans compromis.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#expertises"
+              class="bg-navy text-white px-8 py-4 rounded-lg font-bold hover:opacity-90 transition shadow-lg"
+              >Voir nos solutions</a
+            >
+            <a
+              href="#clients"
+              class="border-2 border-navy text-navy px-8 py-4 rounded-lg font-bold hover:bg-navy hover:text-white transition"
+              >Ils nous font confiance</a
+            >
+          </div>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <img
+            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1000"
+            alt="Poste de travail informatique moderne"
+            class="rounded-2xl shadow-2xl border-b-8 border-orange-brand relative z-10"
+          />
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-50 rounded-full -z-0"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="propos" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-navy uppercase section-title">
+              Partenaire de Progrès
+            </h2>
+            <p class="mt-8 text-gray-700 leading-relaxed text-lg text-justify">
+              Chez <strong>MOH AMI Group SUARL</strong>, nous ne livrons pas
+              seulement du matériel ; nous fournissons les outils de votre
+              réussite. Spécialisés dans les besoins complexes des institutions,
+              nous maîtrisons l'art de l'équipement bureautique et informatique
+              de haute précision.
+            </p>
+            <p
+              class="mt-6 text-navy font-bold text-xl border-l-4 border-orange-500 pl-4 uppercase tracking-tighter"
+            >
+              "Nous équipons aujourd'hui pour construire la performance de
+              demain."
+            </p>
+          </div>
+          <div class="md:w-1/2 grid grid-cols-1 gap-6">
+            <div
+              class="bg-gray-50 p-6 rounded-xl border-r-4 border-orange-500 shadow-sm"
+            >
+              <h4 class="font-bold text-navy uppercase text-sm mb-2">
+                Expertise Institutionnelle
+              </h4>
+              <p class="text-sm text-gray-600 text-justify">
+                Une parfaite maîtrise des exigences des marchés publics et
+                privés au Sénégal.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 p-6 rounded-xl border-r-4 border-navy shadow-sm"
+            >
+              <h4 class="font-bold text-navy uppercase text-sm mb-2">
+                Engagement Qualité
+              </h4>
+              <p class="text-sm text-gray-600 text-justify">
+                Une sélection rigoureuse des plus grandes marques mondiales pour
+                une durabilité garantie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertises" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2
+          class="text-3xl font-bold text-navy uppercase section-title section-title-center mb-16 italic"
+        >
+          Nos Solutions sur Mesure
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-2xl transition-all border-t-4 border-navy"
+          >
+            <i class="fas fa-server text-orange-500 text-3xl mb-6"></i>
+            <h3
+              class="font-bold text-navy mb-3 uppercase text-xs tracking-widest italic"
+            >
+              Hardware & IT
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Serveurs, parcs informatiques mobiles et fixes, et solutions de
+              stockage sécurisées.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-2xl transition-all border-t-4 border-orange-500"
+          >
+            <i class="fas fa-print text-navy text-3xl mb-6"></i>
+            <h3
+              class="font-bold text-navy mb-3 uppercase text-xs tracking-widest italic"
+            >
+              Bureautique Pro
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Systèmes d'impression haute capacité, scanners industriels et
+              mobilier ergonomique.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-2xl transition-all border-t-4 border-navy"
+          >
+            <i class="fas fa-graduation-cap text-orange-500 text-3xl mb-6"></i>
+            <h3
+              class="font-bold text-navy mb-3 uppercase text-xs tracking-widest italic"
+            >
+              Pôle Scolaire
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Fournitures et matériels didactiques pour l'excellence éducative.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-2xl transition-all border-t-4 border-orange-500"
+          >
+            <i class="fas fa-tools text-navy text-3xl mb-6"></i>
+            <h3
+              class="font-bold text-navy mb-3 uppercase text-xs tracking-widest italic"
+            >
+              Support Elite
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Maintenance préventive, installation réseau et service après-vente
+              prioritaire.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white border-y overflow-hidden">
+      <div class="container mx-auto px-6">
+        <h4
+          class="text-center text-xs font-bold text-gray-400 uppercase tracking-[6px] mb-12 italic"
+        >
+          L'excellence mondiale à votre portée
+        </h4>
+        <div
+          class="flex flex-wrap justify-center items-center gap-12 md:gap-20"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
+            alt="HP"
+            class="h-10 brand-logo"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg"
+            alt="Dell"
+            class="h-10 brand-logo"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            alt="Apple"
+            class="h-10 brand-logo"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg"
+            alt="Lenovo"
+            class="h-6 brand-logo"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+            alt="Windows"
+            class="h-8 brand-logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl font-bold text-navy uppercase section-title section-title-center italic"
+          >
+            Références Stratégiques
+          </h2>
+          <p
+            class="mt-6 text-gray-500 max-w-2xl mx-auto font-bold uppercase text-[10px] tracking-[3px]"
+          >
+            Des partenaires qui transforment le Sénégal
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="space-y-4">
+            <h3
+              class="text-orange-500 font-bold uppercase text-xs border-b border-orange-200 pb-2 tracking-widest flex items-center italic"
+            >
+              <i class="fas fa-gavel mr-2"></i> Secteur Public
+            </h3>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Assemblée Nationale
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Dir. de la Comptabilité Publique
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              ADM (Agence Dév. Municipal)
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              FONGIP
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Région Médicale de Dakar
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3
+              class="text-orange-500 font-bold uppercase text-xs border-b border-orange-200 pb-2 tracking-widest flex items-center italic"
+            >
+              <i class="fas fa-university mr-2"></i> Éducation & Finances
+            </h3>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              COUD (Dakar)
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              CROUS-SS
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              U. Assane Seck (UASZ)
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Group IAM
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Postefinances
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3
+              class="text-orange-500 font-bold uppercase text-xs border-b border-orange-200 pb-2 tracking-widest flex items-center italic"
+            >
+              <i class="fas fa-handshake mr-2"></i> ONG & Entreprises
+            </h3>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Carrefour International (ONG)
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Secours Islamiques France
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              La Chaîne de l'Espoir (ONG)
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Bioforce
+            </div>
+            <div
+              class="client-card p-3 rounded shadow-sm text-xs font-bold text-navy uppercase bg-white italic"
+            >
+              Poultrade SARL / SIFA
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-navy text-white pt-20 pb-10">
+      <div class="container mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20 text-center md:text-left"
+        >
+          <div>
+            <div class="text-2xl font-black mb-6 tracking-tighter uppercase">
+              MOH AMI <span class="text-orange-500">GROUP</span>
+            </div>
+            <p class="opacity-60 leading-relaxed text-sm italic font-light">
+              Votre fournisseur d'excellence pour une croissance maîtrisée. Nous
+              transformons vos besoins en solutions performantes.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="font-bold uppercase text-orange-500 mb-6 tracking-widest text-xs italic"
+            >
+              Assistance Commerciale
+            </h4>
+            <p class="text-3xl font-black mb-4 tracking-tighter">
+              <i class="fab fa-whatsapp text-orange-500 mr-2"></i> 77 903 28 92
+            </p>
+            <p class="text-xl font-bold mb-3 tracking-tighter">
+              <i class="fas fa-phone text-orange-500 mr-2"></i> 33 855 05 69
+            </p>
+            <p class="opacity-70 text-sm italic tracking-wide">
+              <i class="fas fa-envelope text-orange-500 mr-2"></i>
+              <a
+                href="/cdn-cgi/l/email-protection"
+                class="__cf_email__"
+                data-cfemail="0d606c6a3f3e236e6263796c6e794d6a606c6461236e6260"
+                >[email&#160;protected]</a
+              >
+            </p>
+          </div>
+          <div>
+            <h4
+              class="font-bold uppercase text-orange-500 mb-6 tracking-widest text-xs italic"
+            >
+              Réactivité Garantie
+            </h4>
+            <p class="opacity-60 text-sm leading-relaxed mb-6 italic">
+              Cotations et réponses aux appels d'offres sous 24h ouvrées.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-orange-500 hover:border-transparent transition-all"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/1ATjP9ioGM/?mibextid=wwXIfr"
+                target="_blank"
+                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-orange-500 hover:border-transparent transition-all"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[4px] opacity-30 text-center"
+        >
+          <p>&copy; 2026 MOH AMI Group SUARL - SIÈGE DAKAR, SÉNÉGAL</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
