@@ -73,6 +73,31 @@
         color: white !important;
       }
 
+      /* Filtres catalogue : une ligne scrollable sur mobile (<768px) */
+      @media (max-width: 767px) {
+        .filter-container {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          gap: 8px;
+          padding: 10px 16px;
+          justify-content: flex-start;
+        }
+
+        .filter-container .filter-btn {
+          flex-shrink: 0;
+          white-space: nowrap;
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+
+        .filter-container::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
       /* Rendu : le navigateur peut reporter le travail pour les cartes hors écran */
       #catalogue-grid > [data-cat] {
         content-visibility: auto;
