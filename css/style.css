@@ -1,0 +1,74 @@
+:root {
+        --primary-blue: #002d62;
+        --accent-orange: #ff8c00;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .bg-navy {
+        background-color: var(--primary-blue);
+      }
+      .text-navy {
+        color: var(--primary-blue);
+      }
+      .bg-orange-brand {
+        background-color: var(--accent-orange);
+      }
+      .border-orange-brand {
+        border-color: var(--accent-orange);
+      }
+      .hover-orange:hover {
+        background-color: #e67e00;
+      }
+      .client-card {
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+      .client-card:hover {
+        border-left: 3px solid var(--accent-orange);
+        background: #f9fafb;
+        transform: translateX(5px);
+      }
+      .brand-logo {
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+      .brand-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      .section-title {
+        position: relative;
+        padding-bottom: 1rem;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--accent-orange);
+      }
+      .section-title-center::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .filter-btn:not(.bg-orange-brand):hover {
+        background-color: var(--primary-blue);
+        color: white !important;
+        border-color: var(--primary-blue);
+      }
+      .filter-btn:not(.bg-orange-brand):hover i {
+        color: white !important;
+      }
+      .filter-btn.bg-orange-brand:hover {
+        background-color: #e67e00;
+        color: white !important;
+      }
+      .filter-btn.bg-orange-brand:hover i {
+        color: white !important;
+      }

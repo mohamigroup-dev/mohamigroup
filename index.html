@@ -9,105 +9,110 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --primary-blue: #002d62;
-        --accent-orange: #ff8c00;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      .bg-navy {
-        background-color: var(--primary-blue);
-      }
-      .text-navy {
-        color: var(--primary-blue);
-      }
-      .bg-orange-brand {
-        background-color: var(--accent-orange);
-      }
-      .border-orange-brand {
-        border-color: var(--accent-orange);
-      }
-      .hover-orange:hover {
-        background-color: #e67e00;
-      }
-      .client-card {
-        transition: all 0.3s ease;
-        border-left: 3px solid transparent;
-      }
-      .client-card:hover {
-        border-left: 3px solid var(--accent-orange);
-        background: #f9fafb;
-        transform: translateX(5px);
-      }
-      .brand-logo {
-        filter: grayscale(100%);
-        opacity: 0.5;
-        transition: all 0.4s ease;
-        cursor: pointer;
-      }
-      .brand-logo:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-        transform: scale(1.1);
-      }
-      .section-title {
-        position: relative;
-        padding-bottom: 1rem;
-      }
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 4px;
-        background: var(--accent-orange);
-      }
-      .section-title-center::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="font-sans text-gray-900 bg-white">
     <nav
       class="fixed w-full z-50 bg-white shadow-md border-t-4 border-orange-brand"
     >
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-6 py-4 flex justify-between items-center gap-4"
       >
-        <div
-          class="text-xl md:text-2xl font-black text-navy tracking-tighter uppercase"
+        <a
+          href="index.html"
+          class="text-xl md:text-2xl font-black text-navy tracking-tighter uppercase hover:opacity-80 transition min-w-0 shrink"
         >
           MOH AMI <span class="text-orange-500">Group SUARL</span>
+        </a>
+        <div class="flex items-center gap-4 lg:gap-6 shrink-0">
+          <div
+            class="hidden lg:flex space-x-8 font-semibold text-xs uppercase tracking-wider text-navy items-center"
+          >
+            <a href="#accueil" class="hover:text-orange-500 transition"
+              >Accueil</a
+            >
+            <a href="#propos" class="hover:text-orange-500 transition"
+              >À Propos</a
+            >
+            <a href="#expertises" class="hover:text-orange-500 transition"
+              >Solutions</a
+            >
+            <a href="catalogue.html" class="hover:text-orange-500 transition"
+              >Catalogue</a
+            >
+            <a href="#clients" class="hover:text-orange-500 transition"
+              >Références</a
+            >
+            <a href="#contact" class="hover:text-orange-500 transition"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="https://wa.me/221779032892"
+            class="hidden lg:flex bg-orange-brand text-white px-5 py-2 rounded-full font-bold hover-orange transition shadow-lg text-xs items-center"
+          >
+            <i class="fab fa-whatsapp mr-2 text-lg"></i> 77 903 28 92
+          </a>
+          <button
+            type="button"
+            class="lg:hidden flex flex-col justify-center items-center w-11 h-11 -mr-1 rounded-md text-navy hover:bg-gray-50 transition shrink-0"
+            data-nav-burger
+            aria-expanded="false"
+            aria-controls="nav-mobile-panel"
+            aria-label="Ouvrir ou fermer le menu"
+          >
+            <span class="block w-7 h-0.5 bg-[#002d62] rounded-sm mb-1.5"></span>
+            <span class="block w-7 h-0.5 bg-[#002d62] rounded-sm mb-1.5"></span>
+            <span class="block w-7 h-0.5 bg-[#002d62] rounded-sm"></span>
+          </button>
         </div>
+      </div>
+      <div
+        id="nav-mobile-panel"
+        data-nav-panel
+        class="hidden lg:hidden border-t-4 border-[#ff8c00] bg-white shadow-lg"
+      >
         <div
-          class="hidden lg:flex space-x-8 font-semibold text-xs uppercase tracking-wider text-navy"
+          class="container mx-auto px-6 flex flex-col items-stretch font-semibold text-xs uppercase tracking-wider text-navy"
         >
-          <a href="#accueil" class="hover:text-orange-500 transition"
+          <a
+            href="#accueil"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
             >Accueil</a
           >
-          <a href="#propos" class="hover:text-orange-500 transition"
+          <a
+            href="#propos"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
             >À Propos</a
           >
-          <a href="#expertises" class="hover:text-orange-500 transition"
+          <a
+            href="#expertises"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
             >Solutions</a
           >
-          <a href="#clients" class="hover:text-orange-500 transition"
+          <a
+            href="catalogue.html"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
+            >Catalogue</a
+          >
+          <a
+            href="#clients"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
             >Références</a
           >
-          <a href="#contact" class="hover:text-orange-500 transition"
+          <a
+            href="#contact"
+            class="py-5 px-4 border-b border-gray-100 hover:text-orange-500 transition text-right text-[1.2rem]"
             >Contact</a
           >
+          <a
+            href="https://wa.me/221779032892"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 mb-8 bg-orange-brand text-white px-5 py-3 rounded-full font-bold hover-orange transition shadow-lg text-xs inline-flex items-center justify-center gap-2 self-end"
+            ><i class="fab fa-whatsapp text-lg"></i> 77 903 28 92</a
+          >
         </div>
-        <a
-          href="https://wa.me/221779032892"
-          class="bg-orange-brand text-white px-5 py-2 rounded-full font-bold hover-orange transition shadow-lg text-xs flex items-center"
-        >
-          <i class="fab fa-whatsapp mr-2 text-lg"></i> 77 903 28 92
-        </a>
       </div>
     </nav>
 
@@ -271,6 +276,147 @@
               prioritaire.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl font-bold text-navy uppercase section-title section-title-center mb-16 text-center"
+        >
+          Nos Produits
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <div
+            data-cat="fournitures-scolaires"
+            class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col"
+          >
+            <div
+              class="w-full bg-orange-50 flex items-center justify-center text-orange-300"
+              style="aspect-ratio: 4/3"
+            >
+              <i class="fas fa-graduation-cap text-5xl"></i>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <h3
+                class="font-bold text-navy uppercase text-sm tracking-wide mb-1"
+              >
+                Scolaire
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed flex-1">
+                Cahiers, fournitures, matériel didactique et équipements pour
+                écoles et universités.
+              </p>
+              <a
+                href="https://wa.me/221779816060"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 bg-orange-brand text-white text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-lg text-center hover-orange transition"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+
+          <div
+            data-cat="fournitures-bureau"
+            class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col"
+          >
+            <div
+              class="w-full bg-orange-50 flex items-center justify-center text-orange-300"
+              style="aspect-ratio: 4/3"
+            >
+              <i class="fas fa-print text-5xl"></i>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <h3
+                class="font-bold text-navy uppercase text-sm tracking-wide mb-1"
+              >
+                Bureautique
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed flex-1">
+                Imprimantes, scanners, mobilier professionnel et solutions
+                d'impression pour vos bureaux.
+              </p>
+              <a
+                href="https://wa.me/221779816060"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 bg-orange-brand text-white text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-lg text-center hover-orange transition"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+
+          <div
+            data-cat="materiels-et-consommables"
+            class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col"
+          >
+            <div
+              class="w-full bg-orange-50 flex items-center justify-center text-orange-300"
+              style="aspect-ratio: 4/3"
+            >
+              <i class="fas fa-laptop text-5xl"></i>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <h3
+                class="font-bold text-navy uppercase text-sm tracking-wide mb-1"
+              >
+                Informatique
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed flex-1">
+                Ordinateurs portables et fixes, serveurs, périphériques et
+                parcs informatiques clés en main.
+              </p>
+              <a
+                href="https://wa.me/221779816060"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 bg-orange-brand text-white text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-lg text-center hover-orange transition"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+
+          <div
+            data-cat="materiels-et-consommables"
+            class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col"
+          >
+            <div
+              class="w-full bg-orange-50 flex items-center justify-center text-orange-300"
+              style="aspect-ratio: 4/3"
+            >
+              <i class="fas fa-fill-drip text-5xl"></i>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <h3
+                class="font-bold text-navy uppercase text-sm tracking-wide mb-1"
+              >
+                Consommables
+              </h3>
+              <p class="text-xs text-gray-500 leading-relaxed flex-1">
+                Encres, toners, papier et consommables compatibles pour
+                entretenir votre parc sans interruption.
+              </p>
+              <a
+                href="https://wa.me/221779816060"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 bg-orange-brand text-white text-xs font-bold uppercase tracking-wider py-2 px-4 rounded-lg text-center hover-orange transition"
+                >Demander un devis</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-12">
+          <a
+            href="catalogue.html"
+            class="bg-orange-brand text-white px-5 py-2 rounded-full font-bold hover-orange transition shadow-lg text-xs flex items-center"
+            >Voir tout le catalogue →</a
+          >
         </div>
       </div>
     </section>
@@ -501,5 +647,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
