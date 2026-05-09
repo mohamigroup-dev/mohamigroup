@@ -38,6 +38,23 @@ document.addEventListener('DOMContentLoaded', function () {
     return out;
   }
 
+  /** Charge les vraies URLs uniquement pour les cartes visibles (pagination + filtres). */
+  function hydrateCatalogueImages() {
+    if (!grid) return;
+    var cards = grid.querySelectorAll('[data-cat]');
+    for (var i = 0; i < cards.length; i++) {
+      var card = cards[i];
+      if (card.style.display === 'none') continue;
+      var img = card.querySelector('img[data-src]');
+      if (!img) continue;
+      var url = img.getAttribute('data-src');
+      if (!url) continue;
+      img.removeAttribute('data-src');
+      img.setAttribute('fetchpriority', 'low');
+      img.src = url;
+    }
+  }
+
   function renderPaginationUI(totalPages, totalMatching) {
     if (!pagNav) return;
     if (totalMatching === 0) {
@@ -131,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     renderPaginationUI(totalPages, totalMatching);
+    hydrateCatalogueImages();
   }
 
   if (pagNav && grid) {

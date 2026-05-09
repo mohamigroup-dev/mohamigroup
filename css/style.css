@@ -72,3 +72,9 @@
       .filter-btn.bg-orange-brand:hover i {
         color: white !important;
       }
+
+      /* Rendu : le navigateur peut reporter le travail pour les cartes hors écran */
+      #catalogue-grid > [data-cat] {
+        content-visibility: auto;
+        contain-intrinsic-size: 320px 380px;
+      }
